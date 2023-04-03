@@ -1,12 +1,10 @@
 .topnav {
     height: 40px;
-    color: white;
-    background-color: #333;
+    background-color: #574898;
 }
 
 .search {
     height: 50px;
-    background-color: #ccc;
 }
 
 .content {
