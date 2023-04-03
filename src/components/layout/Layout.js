@@ -9,11 +9,9 @@ const Layout = () => {
     return (
         <div className="container-fluid">
             <div className={`row ${style.topnav}`}  >
-                <div className="col-10"><Menu/></div>
-                <div className="col-2"><Cart/></div>
-            </div>
-            <div className="row search">
-                <div className="col-12"><Search/></div>
+                <div className="col-5"><Menu /></div>
+                <div className="col-5"><Search /></div>
+                <div className="col-2"><Cart /></div>
             </div>
             <div className="row content">
                 <div className="col-4">product</div>
