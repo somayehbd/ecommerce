@@ -2,17 +2,18 @@ import React from "react";
 import style from './Layout.module.css';
 import Menu from '../menu/Menu';
 import Cart from "../cart/Cart";
+import Search from "../search/Search";
 
 
 const Layout = () => {
     return (
         <div className="container-fluid">
             <div className={`row ${style.topnav}`}  >
-                <div className="col-10"><Menu /></div>
-                <div className="col-2"><Cart /></div>
+                <div className="col-10"><Menu/></div>
+                <div className="col-2"><Cart/></div>
             </div>
             <div className="row search">
-                <div className="col-12"> search</div>
+                <div className="col-12"><Search/></div>
             </div>
             <div className="row content">
                 <div className="col-4">product</div>
