@@ -1,12 +1,12 @@
 import React from "react";
-import './Layout.css';
+import  style from'./Layout.module.css';
 import Menu from '../menu/Menu';
 
 
 const Layout = () => {
     return (
         <div className="container-fluid">
-            <div className="row topnav">
+            <div className={`row ${style.topnav}`}  >
                 <div className="col-6"><Menu/></div>
                 <div className="col-6">shopping cart</div>
             </div>
