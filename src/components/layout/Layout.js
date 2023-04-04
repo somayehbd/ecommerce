@@ -4,6 +4,8 @@ import Menu from '../menu/Menu';
 import Cart from "../cart/Cart";
 import Search from "../search/Search";
 import Leftfoot from "../leftfoot/Leftfoot";
+import Support from "../support/Support";
+
 
 
 
@@ -22,7 +24,7 @@ const Layout = () => {
             </div>
             <div className={`row ${style.footer}`}>
                 <div className="col-4"><Leftfoot/></div>
-                <div className="col-4">footer</div>
+                <div className="col-4"><Support/></div>
                 <div className="col-4">footer</div>
             </div>
         </div>
