@@ -6,6 +6,7 @@ import Search from "../search/Search";
 import Leftfoot from "../leftfoot/Leftfoot";
 import Support from "../support/Support";
 import Map from "../map/Map";
+import ProductBox from "../productbox/ProductBox";
 
 
 
@@ -18,9 +19,9 @@ const Layout = () => {
                 <div className="col-2"><Cart /></div>
             </div>
             <div className="row content">
-                <div className="col-4">product</div>
-                <div className="col-4">product</div>
-                <div className="col-4">product</div>
+                <div className="col-4"><ProductBox/></div>
+                <div className="col-4"><ProductBox/></div>
+                <div className="col-4"><ProductBox/></div>
             </div>
             <div className={`row ${style.footer}`}>
                 <div className="col-4"><Leftfoot/></div>
