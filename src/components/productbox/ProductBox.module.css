@@ -1,3 +1,12 @@
 .img{
-    margin: 10px;
+    width: 100%;
 }
+.productontent{
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    cursor: pointer; 
+}
+.productontent p:first-child {
+    font-weight: bold;
+  }
