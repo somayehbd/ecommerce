@@ -3,7 +3,8 @@ import style from './Layout.module.css';
 import Menu from '../menu/Menu';
 import Cart from "../cart/Cart";
 import Search from "../search/Search";
-import Leftfoot from "../footbar/leftfoot/Leftfoot";
+import Leftfoot from "../leftfoot/Leftfoot";
+
 
 
 const Layout = () => {
