@@ -3,12 +3,13 @@ import style from './Layout.module.css';
 import Menu from '../menu/Menu';
 import Cart from "../cart/Cart";
 import Search from "../search/Search";
+import Leftfoot from "../footbar/Leftfoot";
 
 
 const Layout = () => {
     return (
         <div className="container-fluid">
-            <div className={`row ${style.topnav}`}  >
+            <div className={`row ${style.topnav}`}>
                 <div className="col-5"><Menu /></div>
                 <div className="col-5"><Search /></div>
                 <div className="col-2"><Cart /></div>
@@ -18,8 +19,8 @@ const Layout = () => {
                 <div className="col-4">product</div>
                 <div className="col-4">product</div>
             </div>
-            <div className="row footer">
-                <div className="col-4">footer</div>
+            <div className={`row ${style.footer}`}>
+                <div className="col-4"><Leftfoot/></div>
                 <div className="col-4">footer</div>
                 <div className="col-4">footer</div>
             </div>
