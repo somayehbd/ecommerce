@@ -41,8 +41,8 @@ const Layout = () => {
                                 <img src={item.image} />
                                 <div>
                                     <p>{item.name}</p>
-                        
-                                    <p>{item.description}</p>
+                                    <p>{item.price}</p>
+                                    <p>{item.description.substring(0,40)}...</p>
                                 </div>
                             </div>
                         )
