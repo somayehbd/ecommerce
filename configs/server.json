@@ -1,0 +1,89 @@
+{
+  "uuid": "edb0497f-28fc-41ef-a24c-be97778863de",
+  "lastMigration": 25,
+  "name": "Server",
+  "endpointPrefix": "",
+  "latency": 0,
+  "port": 3100,
+  "hostname": "0.0.0.0",
+  "folders": [],
+  "routes": [
+    {
+      "uuid": "f6c2dc90-717e-4c23-9d77-361c6e0de82e",
+      "documentation": "",
+      "method": "get",
+      "endpoint": "product",
+      "responses": [
+        {
+          "uuid": "cd87ccac-b779-442f-af97-0e67ab9f1fca",
+          "body": "[\n    {\n        \"id\": \"dff9d82a-721f-47d9-849d-ab2ed52a0d46\",\n        \"name\": \"Apple iPhone 12, 64GB, Black\",\n        \"description\": \"The product is refurbished, fully functional, and in good condition. Backed by the 90-day Amazon Renewed Guarantee.\\n- This pre-owned product has been professionally inspected, tested and cleaned by Amazon qualified vendors. It is not certified by Apple.\\n- This product is in \\\"Good condition\\\". The screen has no scratches; body shows light scratches barely visible from 12 inches away.\\n- This product will have a battery that exceeds 80% capacity relative to new.\\n- Accessories may not be original, but will be compatible and fully functional. Product may come in generic box.\\n- Product will come with a SIM removal tool, a charger and a charging cable. Headphone and SIM card are not included.\\n- This product is eligible for a replacement or refund within 90-day of receipt if it does not work as expected.\\n- Refurbished phones are not guaranteed to maintain their\",\n        \"image\": \"/assets/imgs/iphone-pro-12.jpg\",\n        \"seoName\": \"apple-iphone-12-64gb-black\",\n        \"price\": 1200\n    },\n    {\n        \"id\": \"c90a8d4b-8974-4cf9-a64c-15d8c69a1c12\",\n        \"name\": \"HP Spectre x360 Convertible Laptop\",\n        \"description\": \"The HP Spectre x360 is a versatile 2-in-1 laptop that can be used as a traditional laptop or a tablet. It features a 13.3-inch Full HD touchscreen display, an 11th Gen Intel Core i7 processor, 16GB of RAM, and a 512GB solid-state drive. The laptop also has a backlit keyboard, a fingerprint reader, and a Windows Hello camera for secure logins. The battery life is up to 12 hours and the laptop weighs only 2.87 pounds, making it easy to carry around. The HP Spectre x360 is perfect for those who want a powerful and portable laptop that can be used for work, entertainment, or both.\",\n        \"image\": \"/assets/imgs/hp-spectre-x360.jpg\",\n        \"seoName\": \"hp-spectre-x360-convertible-laptop\",\n        \"price\": 635\n    },\n    {\n        \"id\": \"e36dc4b0-0446-4aa6-9a5a-6806a5f6c95d\",\n        \"name\": \"Samsung Galaxy S21 Ultra 5G, 128GB, Phantom Black\",\n        \"description\": \"The Samsung Galaxy S21 Ultra 5G is a powerful smartphone with a 6.8-inch Dynamic AMOLED 2X display, a 108MP primary camera, and a 40MP front-facing camera. It also features a 5,000mAh battery, 128GB of internal storage, and 12GB of RAM. The phone is 5G capable and runs on the Android 11 operating system. It also has an in-display fingerprint sensor and is water and dust resistant. The Samsung Galaxy S21 Ultra 5G is perfect for those who want a high-end smartphone with advanced features.\",\n        \"image\": \"/assets/imgs/samsung-galaxy-s21-ultra.jpg\",\n        \"seoName\": \"samsung-galaxy-s21-ultra-5g-128gb-phantom-black\",\n        \"price\": 810\n    },\n    {\n        \"id\": \"4f4ef32a-6e5b-4f2a-bd03-d10284e098e1\",\n        \"name\": \"Dell XPS 13 Laptop\",\n        \"description\": \"The Dell XPS 13 is a powerful and portable laptop with a 13.3-inch Full HD display, 11th Gen Intel Core i7 processor, 16GB of RAM, and a 512GB solid-state drive. It also features a backlit keyboard, a fingerprint reader, and a Windows Hello camera for secure logins. The laptop has a long battery life of up to 14 hours and weighs only 2.64 pounds, making it easy to take on the go. The Dell XPS 13 is perfect for those who want a high-performance laptop that is also portable and easy to use.\",\n        \"image\": \"/assets/imgs/dell-xps-13.jpg\",\n        \"seoName\": \"dell-xps-13-laptop\",\n        \"price\": 535\n    },\n    {\n        \"id\": \"df5c3162-cda8-4d5e-9311-d9a32035099c\",\n        \"name\": \"Apple iPad Pro, 12.9-inch, 256GB, Wi-Fi, Space Gray\",\n        \"description\": \"The Apple iPad Pro is a powerful tablet with a 12.9-inch Liquid Retina XDR display, an A12Z Bionic chip with Neural Engine, and 256GB of storage. It features a 12MP wide camera and a 10MP ultra wide camera, as well as a LiDAR scanner for immersive AR experiences. The tablet has Wi-Fi connectivity and supports Apple Pencil and Magic Keyboard. The battery life is up to 10 hours and the tablet weighs only 1.41 pounds. The Apple iPad Pro is perfect for those who want a high-end tablet for work, creativity, or entertainment.\",\n        \"image\": \"/assets/imgs/apple-ipad-pro.jpg\",\n        \"seoName\": \"apple-ipad-pro-12-9-inch-256gb-wi-fi-space-gray\",\n        \"price\": 1305\n    },\n    {\n        \"id\": \"a5b5d5f8-5f69-4910-b71f-6470eb1788f6\",\n        \"name\": \"Sony WH-1000XM4 Wireless Noise-Cancelling Headphones\",\n        \"description\": \"The Sony WH-1000XM4 headphones are wireless noise-cancelling headphones that feature advanced noise-cancellation technology for immersive sound. They also have touch controls for easy operation, voice assistant support, and up to 30 hours of battery life. The headphones are comfortable to wear and come with a carrying case for easy portability. The Sony WH-1000XM4 headphones are perfect for those who want a high-quality audio experience without any distractions.\",\n        \"image\": \"/assets/imgs/sony-wh-1000xm4.jpg\",\n        \"seoName\": \"sony-wh-1000xm4-wireless-noise-cancelling-headphones\",\n        \"price\": 935\n    },\n    {\n        \"id\": \"0b01a52a-9cfe-4265-9e3c-5ab5d5f177b5\",\n        \"name\": \"Microsoft Surface Pro 7\",\n        \"description\": \"The Microsoft Surface Pro 7 is a powerful and versatile 2-in-1 laptop/tablet that features a 12.3-inch touchscreen display, 10th Gen Intel Core i5 processor, 8GB of RAM, and a 128GB solid-state drive. It also has a USB-C port, a microSDXC card reader, and a Windows Hello camera for secure logins. The battery life is up to 10.5 hours and the tablet weighs only 1.70 pounds, making it easy to carry around. The Microsoft Surface Pro 7 is perfect for those who want a powerful and versatile device that can be used for work, entertainment, or both.\",\n        \"image\": \"/assets/imgs/microsoft-surface-pro-7.jpg\",\n        \"seoName\": \"microsoft-surface-pro-7\",\n        \"price\": 1050\n    },\n    {\n        \"id\": \"7b25ed52-562f-4c9e-a8dd-2da2c423f5a5\",\n        \"name\": \"Canon EOS Rebel T8i DSLR Camera\",\n        \"description\": \"The Canon EOS Rebel T8i is a high-quality DSLR camera that features a 24.1-megapixel APS-C CMOS sensor, a DIGIC 8 image processor, and 4K video recording. It also has built-in Wi-Fi and Bluetooth connectivity for easy sharing and remote control. The camera comes with an EF-S 18-55mm lens and has a vari-angle touchscreen LCD for easy operation. The Canon EOS Rebel T8i is perfect for those who want a high-quality camera for photography and videography.\",\n        \"image\": \"/assets/imgs/canon-eos-rebel-t8i.jpg\",\n        \"seoName\": \"canon-eos-rebel-t8i-dslr-camera\",\n        \"price\": 910\n    },\n    {\n        \"id\": \"546b25fd-1d10-4489-8e8c-1fd7a80e49d2\",\n        \"name\": \"Fitbit Versa 3 Smartwatch\",\n        \"description\": \"The Fitbit Versa 3 is a smartwatch that features a 1.58-inch AMOLED display, heart rate monitoring, GPS tracking, and voice assistant support. It also has up to 6 days of battery life and is water-resistant up to 50 meters. The smartwatch comes with a variety of fitness tracking features, including personalized workouts, active zone minutes, and sleep tracking. It also has built-in music storage and supports streaming from services like Spotify. The Fitbit Versa 3 is perfect for those who want a smartwatch that can help them stay active and healthy.\",\n        \"image\": \"/assets/imgs/fitbit-versa-3.jpg\",\n        \"seoName\": \"fitbit-versa-3-smartwatch\",\n        \"price\": 855\n    },\n    {\n        \"id\": \"1d04e5d8-b078-474e-9775-5ed33d5c0561\",\n        \"name\": \"Sony PlayStation 5 Console\",\n        \"description\": \"The Sony PlayStation 5 is a powerful gaming console that features lightning-fast loading times, stunning graphics, and immersive haptic feedback. It has a custom AMD Zen 2 processor, a high-speed SSD, and 16GB of GDDR6 RAM. The console also has a built-in 4K Blu-ray player and supports streaming services like Netflix, Amazon Prime Video, and Disney+. The Sony PlayStation 5 is perfect for those who want a high-performance gaming console with advanced features.\",\n        \"image\": \"/assets/imgs/sony-playstation-5.jpg\",\n        \"seoName\": \"sony-playstation-5-console\",\n        \"price\": 880\n    }\n]",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true
+        }
+      ],
+      "enabled": true,
+      "responseMode": null
+    }
+  ],
+  "rootChildren": [
+    {
+      "type": "route",
+      "uuid": "f6c2dc90-717e-4c23-9d77-361c6e0de82e"
+    }
+  ],
+  "proxyMode": false,
+  "proxyHost": "",
+  "proxyRemovePrefix": false,
+  "tlsOptions": {
+    "enabled": false,
+    "type": "CERT",
+    "pfxPath": "",
+    "certPath": "",
+    "keyPath": "",
+    "caPath": "",
+    "passphrase": ""
+  },
+  "cors": true,
+  "headers": [
+    {
+      "key": "Content-Type",
+      "value": "application/json"
+    },
+    {
+      "key": "Access-Control-Allow-Origin",
+      "value": "*"
+    },
+    {
+      "key": "Access-Control-Allow-Methods",
+      "value": "GET,POST,PUT,PATCH,DELETE,HEAD,OPTIONS"
+    },
+    {
+      "key": "Access-Control-Allow-Headers",
+      "value": "Content-Type, Origin, Accept, Authorization, Content-Length, X-Requested-With"
+    }
+  ],
+  "proxyReqHeaders": [
+    {
+      "key": "",
+      "value": ""
+    }
+  ],
+  "proxyResHeaders": [
+    {
+      "key": "",
+      "value": ""
+    }
+  ],
+  "data": []
+}
