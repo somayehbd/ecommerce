@@ -26,7 +26,7 @@ function HomeProduct() {
                 product.map(item => {
                     return (
                         <div className="col-4" key={item.id}>
-                            <Link to="/detail">
+                            <Link to={`/detail/${item.seoName}`}>
                                 <img src={item.image} />
                             </Link>
                             <div>

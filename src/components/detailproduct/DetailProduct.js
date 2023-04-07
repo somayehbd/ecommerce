@@ -1,6 +1,6 @@
 function DetailProduct(){
     return(
-<hi>detailss</hi>
+        <h1>hhh</h1>
     )
-}
+    }
 export default DetailProduct;
