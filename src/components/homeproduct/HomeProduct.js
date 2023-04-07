@@ -1,5 +1,6 @@
 
 import { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 
 function HomeProduct() {
 
@@ -25,15 +26,21 @@ function HomeProduct() {
                 product.map(item => {
                     return (
                         <div className="col-4" key={item.id}>
-                            <img src={item.image} />
+                            <Link to="/detail">
+                                <img src={item.image} />
+                            </Link>
                             <div>
-                                <p>{item.name}</p>
+                                <Link to="/detail">
+                                    <p>{item.name}</p>
+                                </Link>
                                 <p>{item.price}</p>
                                 <p>{item.description.substring(0, 40)}...</p>
                             </div>
                         </div>
                     )
+
                 })
+
             }
 
         </>
