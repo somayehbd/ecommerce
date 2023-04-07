@@ -12,7 +12,6 @@ function HomeProduct() {
                 return res.json()
             })
             .then(data => {
-                console.log(data)
                 setproduct(data)
             })
             .catch(error => {
