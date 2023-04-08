@@ -1,6 +1,7 @@
 
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import style from './HomeProduct.module.css'
 
 function HomeProduct() {
 
@@ -24,17 +25,17 @@ function HomeProduct() {
             {
                 product.map(item => {
                     return (
-                        <div className="col-4" key={item.id}>
+                        <div className="col-3" key={item.id}>
                             <Link to={`/detail/${item.seoName}`}>
-                                <img src={item.image} />
+                                <img src={item.image} className={style.image}/>
                             </Link>
-                            <div>
+                            <div className={style.productdetail}>
                                 <Link to="/detail">
                                     <p>{item.name}</p>
                                 </Link>
                                 <p>{item.price}</p>
                                 <p>{item.description.substring(0, 40)}...</p>
-                                <a href="#" class="btn btn-primary">ADD TO CART</a>
+                                <a href="#" className={`btn btn-primary ${style.button}`}>ADD TO CART</a>
                             </div>
                         </div>
                     )

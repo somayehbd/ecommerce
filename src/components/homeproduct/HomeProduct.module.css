@@ -1,6 +1,7 @@
-.productdetail{
-  text-align: center;
+.productdetail {
+    text-align: center;
 }
+
 .button {
     background: #de2454;
     border-width: 1px;
@@ -13,10 +14,14 @@
     cursor: pointer;
     justify-content: center;
     color: rgba(255, 255, 255, var(--text-opacity));
-  
-  }
+
+}
+
 .button:hover {
     background-color: #bf1f49;
     transform: scale(1.02);
-  }
- 
+}
+
+.image {
+width: 100%;
+}

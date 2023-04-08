@@ -23,12 +23,12 @@ function DetailProduct() {
 
 
     return (
-        <div className={style.productdetail}>
+        <div className={`className="col-12 ${style.productdetail}`}>
             <img src={product.image} />
             <p>{product.name}</p>
             <p>{product.price}</p>
             <p>{product.description}</p>
-            <a href="#" class="btn btn-primary">ADD TO CART</a>
+            <a href="#" className={`btn btn-primary ${style.button}`}>ADD TO CART</a>
         </div>
 
 
