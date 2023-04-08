@@ -1,6 +1,6 @@
 import style from './Layout.module.css';
 import Menu from '../menu/Menu';
-import Cart from "../cart/Cart";
+import CartIcon from '../cart/CartIcon'
 import Search from "../search/Search";
 import Leftfoot from "../leftfoot/Leftfoot";
 import Support from "../support/Support";
@@ -15,7 +15,7 @@ const Layout = () => {
             <div className={`row ${style.topnav}`}>
                 <div className="col-5"><Menu /></div>
                 <div className="col-5"><Search /></div>
-                <div className="col-2"><Cart /></div>
+                <div className="col-2"><CartIcon/></div>
             </div>
             <div className={`row ${style.content}`}>
           <Outlet/>
