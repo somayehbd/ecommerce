@@ -3,9 +3,11 @@ import { FaShoppingCart } from 'react-icons/fa';
 
 const Cart = () => {
     const handleClick = () => {
-        alert('this is shoppingcart')
+      <div>
+        
+      </div>
     }
-    
+
     return (
         <div className={`${style.cart}`} onClick={handleClick}>
             <FaShoppingCart />

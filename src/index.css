@@ -11,3 +11,20 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+.btn-primary {
+  color: #fff;
+  border-color: transparent;
+}
+.btn-primary:not(:disabled):not(.disabled).active,
+ .btn-primary:not(:disabled):not(.disabled):active, 
+ .show >.btn-primary.dropdown-toggle {
+  color: #fff;
+  background-color: #bf1f49;
+  border-color: transparent;
+}
+
+.btn, .btn:hover, .btn:active, .btn:visited, .btn:focus, .btn:focus-visible {
+  outline: none !important;
+  box-shadow: none !important;
+  border: none !important;
+}

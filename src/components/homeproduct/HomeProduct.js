@@ -34,6 +34,7 @@ function HomeProduct() {
                                 </Link>
                                 <p>{item.price}</p>
                                 <p>{item.description.substring(0, 40)}...</p>
+                                <a href="#" class="btn btn-primary">ADD TO CART</a>
                             </div>
                         </div>
                     )
