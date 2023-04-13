@@ -8,6 +8,9 @@ const cartIconSliceWithAction = createSlice({
     reducers: {
         incrementedWithAction: (state,action) => {
         state.value = state.value + action.payload
+      },
+      decrementedWithAction: (state,action) => {
+        state.value = state.value - action.payload
       }
     }
   })

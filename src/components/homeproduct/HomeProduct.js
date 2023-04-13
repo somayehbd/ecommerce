@@ -9,6 +9,7 @@ function HomeProduct() {
 
     const [product, setproduct] = useState([]);
     const dispatch = useDispatch();
+
     useEffect(() => {
         fetch('http://localhost:3100/product')
             .then(res => {
@@ -37,9 +38,8 @@ function HomeProduct() {
                                 </Link>
                                 <p>{item.price}</p>
                                 <p>{item.description.substring(0, 40)}...</p>
-                                <a href="#" className={`btn btn-primary ${style.button}`} onClick={() => { dispatch(incrementedWithAction(10))}}>ADD TO CART</a>
-                                <button   ></button>
-                                
+                                <a href="#" className={`btn btn-primary ${style.button}`} onClick={() => { dispatch(incrementedWithAction(1)) }}>ADD TO CART</a>
+
                             </div>
                         </div>
                     )

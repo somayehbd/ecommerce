@@ -7,8 +7,22 @@
     width: 40px;
     height: 40px;
     cursor: pointer; 
+    position: relative;
 }
 .row{
     background: red;
     background-color: red;
+}
+
+.cart span {
+    position: absolute;
+    background: #000;
+    border-radius: 40px;
+    width: 18px;
+    height: 18px;
+    font-size: 11px;
+    text-align: center;
+    font-weight: 700;
+    right: 0;
+    top: 5px;
 }
