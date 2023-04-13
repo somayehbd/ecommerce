@@ -1,19 +1,12 @@
 import style from './CartIcon.module.css'
-import { useSelector } from "react-redux"
 import { FaShoppingCart } from 'react-icons/fa';
+import { useSelector } from "react-redux"
 
 const Cart = () => {
-
-    const value = useSelector((state) => state.counterReducer.value);
-
-    const handleClick = () => {
-
-        
-    }
-
+    const counteWithAction = useSelector((state) => state.cartIconSliceWithAction.value);
     return (
-        <div className={`${style.cart}`} onClick={handleClick}>
-            {value}
+        <div className={`${style.cart}`} >
+             {counteWithAction}
             <FaShoppingCart />
         </div>
     

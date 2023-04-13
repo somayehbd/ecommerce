@@ -1,9 +1,10 @@
-import { configureStore } from '@reduxjs/toolkit'
-import counterSlice from "./counterSlice"
+import { configureStore } from '@reduxjs/toolkit';
+import cartIconSliceWithAction from './cartIconSliceWithAction';
 
 const store = configureStore({
-    reducer: {
-      counterReducer: counterSlice.reducer
-    }
-  });
+  reducer: {
+  
+    cartIconSliceWithAction: cartIconSliceWithAction.reducer
+  }
+})
 export default store;

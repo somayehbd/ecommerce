@@ -2,7 +2,7 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { useDispatch } from "react-redux"
-import { incremented, decremented } from "../../Redux/counterSlice"
+import { decrementedWithAction, incrementedWithAction } from "../../Redux/cartIconSliceWithAction"
 import style from './HomeProduct.module.css'
 
 function HomeProduct() {
@@ -37,13 +37,9 @@ function HomeProduct() {
                                 </Link>
                                 <p>{item.price}</p>
                                 <p>{item.description.substring(0, 40)}...</p>
-                                <a href="#" className={`btn btn-primary ${style.button}`}>ADD TO CART</a>
-                                <button onClick={() => {
-                                    dispatch(incremented())
-                                }}>+1</button>
-                                <button onClick={() => {
-                                    dispatch(decremented())
-                                }}>-1</button>
+                                <a href="#" className={`btn btn-primary ${style.button}`} onClick={() => { dispatch(incrementedWithAction(10))}}>ADD TO CART</a>
+                                <button   ></button>
+                                
                             </div>
                         </div>
                     )
