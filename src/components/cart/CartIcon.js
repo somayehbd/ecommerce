@@ -7,7 +7,7 @@ import { useState } from 'react';
 const Cart = () => {
 
     const counteWithAction = useSelector((state) => state.cartIconSliceWithAction.value);
-    //handleclick to open&close shoppingCart
+    //handleclick to show and hidden shoppingCart
     const [isOpenCart, setisOpenCart] = useState(false);
     const handleCloseCart = () => {
         setisOpenCart(!isOpenCart)
