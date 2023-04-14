@@ -2,19 +2,24 @@ import style from './CartIcon.module.css'
 import { FaShoppingCart } from 'react-icons/fa';
 import { useSelector } from "react-redux"
 import ShoppingCart from '../shoppingcart/ShoppingCart';
+import { useState } from 'react';
 
 const Cart = () => {
 
     const counteWithAction = useSelector((state) => state.cartIconSliceWithAction.value);
-
+    //handleclick to open&close shoppingCart
+    const [isOpenCart, setisOpenCart] = useState(false);
+    const handleCloseCart = () => {
+        setisOpenCart(!isOpenCart)
+    }
 
     return (
         <>
-            <div className={`${style.cart}`} >
-                <FaShoppingCart onClick={() => { alert('aa') }} />
+            <div className={`${style.cart}`}>
+                <FaShoppingCart onClick={handleCloseCart} />
                 <span>{counteWithAction}</span>
             </div>
-            <ShoppingCart />
+            {isOpenCart ? <ShoppingCart /> : null}
         </>
     )
 }

@@ -2,17 +2,23 @@ import HomeProduct from "../homeproduct/HomeProduct";
 import style from './ShoppingCart.module.css'
 import { RiDeleteBin6Fill } from 'react-icons/ri';
 import { IoClose } from 'react-icons/io5';
+import { useState } from "react";
+
 function ShoppingCart() {
 
 
     return (
+    <>
         <div className={`container ${style.shoppingCartContainer}`}>
             <div className="row">
                 <div className={`col-12 ${style.shopppingCartHeader}`}>
-                  <p>shopping Cart</p>
-                    <div className={style.closeShoppingcart}> <IoClose /> </div>
+                    <p>shopping Cart</p>
+                    <div className={style.closeShoppingcart}>
+                        <IoClose />
+                    </div>
                 </div>
             </div>
+
             <div className={`row ${style.contentContainer}`}>
                 <div className="col-12">
                     <div className={style.flexContainer}>
@@ -29,6 +35,7 @@ function ShoppingCart() {
                     </div>
                 </div>
             </div>
+
             <div className={`row ${style.calcContainer}`}>
                 <div className={`col-12 ${style.shopppingCartTotal}`}>
                     <p> TotalPrice:</p>
@@ -41,6 +48,7 @@ function ShoppingCart() {
                 </div>
             </div>
         </div>
+        </>
     )
 }
 export default ShoppingCart;
