@@ -1,6 +1,9 @@
 .topnav {
     height: 40px;
     background-color: #574898;
+    width: 100%;
+    z-index: 1;
+    position: fixed;
 }
 .footer{
     height: 100px;

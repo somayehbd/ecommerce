@@ -1,56 +1,107 @@
 .shoppingCartContainer {
     z-index: 1;
-    position: absolute;
-    top: 0 px;
+    position: fixed;
+    top: 40px;
     right: 0px;
     width: 300px;
+    height: calc(100vh - 40px);
     border: 2px solid #ddd;
     background-color: #f7f7f7;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    background-color: red;
 }
 
 .shopppingCartHeader {
-  
+    position: relative;
+    height: 30px;
+    padding-bottom: 3px;
+    border-bottom: 1px solid #767676;
 }
 
-.shopppingCartHeader p:first-child {
+.shopppingCartHeader p {
     text-align: left;
-    color: blue;
-    display: inline-block;
+    position: absolute;
+    left: 0;
+    font-weight: bold;
 }
 
 .closeShoppingcart {
     text-align: right;
-    display: inline-block;
-}
-
-.shopppingCartImg {
-
-    text-align: right;
-}
-
-.shopppingCartContent p {
-    text-align: center;
-    color: rgb(12, 11, 11);
-}
-
-.shopppingCartRemove>button {
-    text-align: left;
-    background-color: blue;
-
+    position: absolute;
+    right: 0;
 }
 
 .shopppingCartTotal p {
     display: inline-block;
-}
-
-.shopppingCartTotal p:first-child {
-    text-align: left;
+    font-weight: bold;
 }
 
 .shopppingCartTotal p:nth-child(2) {
     text-align: right;
-    color: blue;
+    position: absolute;
+    right: 0;
+}
+
+.contentContainer {
+    border-bottom: 1px solid #767676;
+    margin-top: 10px;
+}
+
+.flexContainer {
+
+    display: flex;
+    height: 100%;
+
+}
+
+.item1 {
+    /* flex:0 1 auto; */
+    flex-grow: 0;
+}
+
+.item1 *:focus {
+    outline: none !important;
+}
+
+.item1 button {
+    border: 0;
+    background-color: transparent;
+    color: #ff0000;
+}
+.item1 button:hover{
+    transform: scale(1.10);
+}
+
+.item1 button:active{
+    color: #c40000;
+}
+
+.item2 {
+    /* flex:1 1 auto; */
+    flex-grow: 1;
+    text-align: center;
+}
+
+.item2 p:nth-child(1) {
+    font-weight: bold;
+}
+
+.btncontainer {
+    position: absolute;
+    bottom: 10px;
+}
+
+.calcContainer {
+    position: absolute;
+    bottom: 50px;
+    width: 100%;
+}
+
+.btncontainer a {
+    background: #6cd247;
+    color: #fffee0 !important;
+    border-radius: 2px;
+}
+
+.btncontainer a:hover {
+    background: #6cd247;
 }
