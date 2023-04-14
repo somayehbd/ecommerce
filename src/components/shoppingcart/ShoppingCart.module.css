@@ -1,0 +1,56 @@
+.shoppingCartContainer {
+    z-index: 1;
+    position: absolute;
+    top: 0 px;
+    right: 0px;
+    width: 300px;
+    border: 2px solid #ddd;
+    background-color: #f7f7f7;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    background-color: red;
+}
+
+.shopppingCartHeader {
+  
+}
+
+.shopppingCartHeader p:first-child {
+    text-align: left;
+    color: blue;
+    display: inline-block;
+}
+
+.closeShoppingcart {
+    text-align: right;
+    display: inline-block;
+}
+
+.shopppingCartImg {
+
+    text-align: right;
+}
+
+.shopppingCartContent p {
+    text-align: center;
+    color: rgb(12, 11, 11);
+}
+
+.shopppingCartRemove>button {
+    text-align: left;
+    background-color: blue;
+
+}
+
+.shopppingCartTotal p {
+    display: inline-block;
+}
+
+.shopppingCartTotal p:first-child {
+    text-align: left;
+}
+
+.shopppingCartTotal p:nth-child(2) {
+    text-align: right;
+    color: blue;
+}
