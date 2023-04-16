@@ -4,11 +4,18 @@ import { Link } from 'react-router-dom';
 import { useDispatch } from "react-redux"
 import { decrementedWithAction, incrementedWithAction } from "../../Redux/cartIconSliceWithAction"
 import style from './HomeProduct.module.css'
+import { productContent } from '../../Redux/productContentSlice'
 
 function HomeProduct() {
 
     const [product, setproduct] = useState([]);
     const dispatch = useDispatch();
+    // have different dispatch 
+
+    const handleClick = (name,price,image) => {
+        dispatch(incrementedWithAction(1))
+        dispatch(productContent({ name: name, price: price, image:image }))
+    }
 
     useEffect(() => {
         fetch('http://localhost:3100/product')
@@ -38,7 +45,7 @@ function HomeProduct() {
                                 </Link>
                                 <p>{item.price}</p>
                                 <p>{item.description.substring(0, 40)}...</p>
-                                <a href="#" className={`btn btn-primary ${style.button}`} onClick={() => { dispatch(incrementedWithAction(1)) }}>ADD TO CART</a>
+                                <a href="#" className={`btn btn-primary ${style.button}`} onClick={() => { handleClick(item.name, item.price, item.image) }}>ADD TO CART</a>
 
                             </div>
                         </div>

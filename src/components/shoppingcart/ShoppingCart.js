@@ -4,12 +4,25 @@ import { RiDeleteBin6Fill } from 'react-icons/ri';
 import { IoClose } from 'react-icons/io5';
 import { useDispatch } from 'react-redux';
 import { cartVisibility } from '../../Redux/changeShoppingCartVisibilitySlice.js'
+import { useSelector } from "react-redux";
+import { useEffect, useState } from "react";
 
 function ShoppingCart() {
 
     const dispatch = useDispatch();
+    //subscriber
+    const productContent = useSelector(state => state.productContent.value);
+    const [productContentArr, setproductContentArr] = useState([]);
 
-    return ( 
+    useEffect(() => {
+        if (productContent == null || productContent == undefined || Object.keys(productContent).length === 0)
+            return;
+
+        const newArray = [...productContentArr, productContent]
+        setproductContentArr(newArray)
+    }, [productContent]);
+
+    return (
         <>
             <div className={`container ${style.shoppingCartContainer}`}>
                 <div className="row">
@@ -23,18 +36,25 @@ function ShoppingCart() {
 
                 <div className={`row ${style.contentContainer}`}>
                     <div className="col-12">
-                        <div className={style.flexContainer}>
-                            <div className={style.item1}>
-                                <button><RiDeleteBin6Fill size={24} /></button>
-                            </div>
-                            <div className={style.item2}>
-                                <p>iphone 12</p>
-                                <p>$1200</p>
-                            </div>
-                            <div>
-                                <img src="https://dummyimage.com/45x45/000/fff" />
-                            </div>
-                        </div>
+                        {
+                            productContentArr.map((item, index) => {
+                                return (
+                                    <div key={index} className={style.flexContainer}>
+                                        <div className={style.item1}>
+                                            <button><RiDeleteBin6Fill size={24} /></button>
+                                        </div>
+
+                                        <div className={style.item2}>
+                                            <p>{item.name}</p>
+                                            <p>{item.price}</p>
+                                        </div>
+                                        <div className={style.item3}>
+                                            <img src={item.image} />
+                                        </div>
+                                    </div>
+                                )
+                            })
+                        }
                     </div>
                 </div>
 

@@ -52,8 +52,9 @@
 .flexContainer {
 
     display: flex;
-    height: 100%;
-
+    border-bottom: 1px solid rgb(155, 155, 155);
+    margin-bottom: 10px;
+    padding-bottom: 5px;
 }
 
 .item1 {
@@ -86,6 +87,10 @@
 
 .item2 p:nth-child(1) {
     font-weight: bold;
+}
+
+.item3 img {
+    width: 45px;
 }
 
 .btncontainer {
