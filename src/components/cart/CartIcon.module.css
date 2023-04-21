@@ -26,3 +26,12 @@
     right: 0;
     top: 5px;
 }
+.cartIcon:hover {
+    color: #fa2222;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+.cart:hover {
+    background-color:#8b99fa;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    border-radius: 50%;
+}

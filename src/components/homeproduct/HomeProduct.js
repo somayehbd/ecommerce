@@ -9,12 +9,12 @@ import { productContent } from '../../Redux/productContentSlice'
 function HomeProduct() {
 
     const [product, setproduct] = useState([]);
+    console.log(product)
     const dispatch = useDispatch();
     // have different dispatch 
-
-    const handleClick = (name,price,image) => {
+    const handleClick = (id,name, price, image) => {
         dispatch(incrementedWithAction(1))
-        dispatch(productContent({ name: name, price: price, image:image }))
+        dispatch(productContent({ id: id, name: name, price: price, image: image}))
     }
 
     useEffect(() => {
@@ -45,7 +45,7 @@ function HomeProduct() {
                                 </Link>
                                 <p>{item.price}</p>
                                 <p>{item.description.substring(0, 40)}...</p>
-                                <a href="#" className={`btn btn-primary ${style.button}`} onClick={() => { handleClick(item.name, item.price, item.image) }}>ADD TO CART</a>
+                                <a href="#" className={`btn btn-primary ${style.button}`} onClick={() => handleClick(item.id, item.name, item.price, item.image)}>ADD TO CART</a>
 
                             </div>
                         </div>

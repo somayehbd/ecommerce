@@ -30,9 +30,10 @@
     right: 0;
 }
 
-.closeShoppingcart svg:active{
+.closeShoppingcart svg:active {
     color: red;
 }
+
 .shopppingCartTotal p {
     display: inline-block;
     font-weight: bold;
@@ -45,8 +46,9 @@
 }
 
 .contentContainer {
-    border-bottom: 1px solid #767676;
     margin-top: 10px;
+    overflow: auto;
+    height: calc(100vh - 225px);
 }
 
 .flexContainer {
@@ -71,11 +73,12 @@
     background-color: transparent;
     color: #ff0000;
 }
-.item1 button:hover{
+
+.item1 button:hover {
     transform: scale(1.10);
 }
 
-.item1 button:active{
+.item1 button:active {
     color: #c40000;
 }
 
@@ -91,6 +94,8 @@
 
 .item3 img {
     width: 45px;
+    border-radius: 50%;
+
 }
 
 .btncontainer {

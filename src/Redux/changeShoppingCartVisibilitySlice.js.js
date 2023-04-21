@@ -12,5 +12,5 @@ const cartVisibilitySlice = createSlice({
     }
   })
   
-  export const { cartVisibility} = cartVisibilitySlice.actions
+  export const { cartVisibility } = cartVisibilitySlice.actions
   export default cartVisibilitySlice;
