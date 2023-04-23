@@ -1,0 +1,26 @@
+@startuml
+title Ecommerce Flowchart
+
+start
+
+repeat
+  :Customer see products on home page;
+  if (He clicks on a product) then (yes)
+    : Test;
+  else (no)
+    if (He clicks on + button to add the product to shopping cart) then (yes)
+      :Product will be added to shopping cart;
+    else (no)
+    endif
+  endif
+repeat while (Continue) is (yes)
+-> no;
+
+if (He clicks on the shopping cart) (yes)
+  :Pay;
+else (no)
+  :Not Pay;
+endif
+
+stop
+@enduml

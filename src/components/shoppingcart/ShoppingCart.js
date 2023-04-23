@@ -11,7 +11,7 @@ function ShoppingCart() {
     const dispatch = useDispatch();
     //subscriber
     const productContent = useSelector(state => state.productContent.value);
-console.log(productContent)
+
     return (
         <>
             <div className={`container ${style.shoppingCartContainer}`}>
@@ -28,13 +28,13 @@ console.log(productContent)
                     <div className="col-12">
                         {productContent.map(item => {
                             return (
-                                <div key={item.key}className={style.flexContainer}>
+                                <div key={item.key} className={style.flexContainer}>
                                     <div className={style.item1}>
                                         <button><RiDeleteBin6Fill size={24} /></button>
                                     </div>
                                     <div className={style.item2}>
                                         <p>{item.data.name}</p>
-                                        <p>{"$"+ item.data.price}</p>
+                                        <p>{"$" + item.data.price}</p>
                                     </div>
                                     <div className={style.item3}>
                                         <img src={item.data.image} />
