@@ -6,7 +6,8 @@ import { useEffect, useState } from 'react';
 
 const Cart = () => {
     const [isOpenCart, setisOpenCart] = useState(false);
-    const counteWithAction = useSelector((state) => state.cartIconSliceWithAction.value);
+    //listener to productContentSlice to count number of products
+    const products = useSelector((state) => state.productContent.value);
     // cartIcon is subscriber to close cart
     const cartvisibility = useSelector(state => state.cartVisibility.value);
 
@@ -26,7 +27,7 @@ const Cart = () => {
         <>
             <div className={`${style.cart}`}>
                 <FaShoppingCart onClick={handleCloseCart} />
-                <span>{counteWithAction}</span>
+                <span>{products.length}</span>
             </div>
             {isOpenCart ? <ShoppingCart /> : null}
         </>
