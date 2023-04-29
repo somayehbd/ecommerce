@@ -30,7 +30,7 @@ function ShoppingCart() {
                             return (
                                 <div key={item.key} className={style.flexContainer}>
                                     <div className={style.item1}>
-                                        <button><RiDeleteBin6Fill size={24} /></button>
+                                        <button><RiDeleteBin6Fill size={24} onClick={()=>{alert('jj')}} /></button>
                                     </div>
                                     <div className={style.item2}>
                                         <p>{item.data.name}</p>
