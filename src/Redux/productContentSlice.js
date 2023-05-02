@@ -21,9 +21,8 @@ const productContentSlice = createSlice({
       localStorage.setItem('products', JSON.stringify(state.value));
     },
     deleteProduct: (state, action)  => {
-      console.log(action)
       state.value = state.value.filter(item => item.key !== action.payload);
-      
+      localStorage.setItem('products', JSON.stringify(state.value));
     }
   }
 })
