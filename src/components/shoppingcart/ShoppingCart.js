@@ -5,13 +5,13 @@ import { IoClose } from 'react-icons/io5';
 import { useDispatch } from 'react-redux';
 import { cartVisibility } from '../../Redux/changeShoppingCartVisibilitySlice.js'
 import { useSelector } from "react-redux";
-
+import { deleteProduct } from "../../Redux/productContentSlice"
 function ShoppingCart() {
 
     const dispatch = useDispatch();
     //subscriber
     const productContent = useSelector(state => state.productContent.value);
-
+    
     return (
         <>
             <div className={`container ${style.shoppingCartContainer}`}>
@@ -30,7 +30,7 @@ function ShoppingCart() {
                             return (
                                 <div key={item.key} className={style.flexContainer}>
                                     <div className={style.item1}>
-                                        <button><RiDeleteBin6Fill size={24} onClick={()=>{alert('jj')}} /></button>
+                                        <button ><RiDeleteBin6Fill size={24} onClick={() => dispatch(deleteProduct(item.key))} /></button>
                                     </div>
                                     <div className={style.item2}>
                                         <p>{item.data.name}</p>

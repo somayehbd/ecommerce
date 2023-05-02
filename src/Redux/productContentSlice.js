@@ -5,7 +5,7 @@ const productContentSlice = createSlice({
   initialState: {
     value: JSON.parse(localStorage.getItem('products')) ?? [],
     position: 0,
-    timestamp : Date.now(),
+    timestamp: Date.now(),
   },
   reducers: {
     productContent: (state, action) => {
@@ -19,9 +19,14 @@ const productContentSlice = createSlice({
       }
       state.value = [...state.value, newData];
       localStorage.setItem('products', JSON.stringify(state.value));
+    },
+    deleteProduct: (state, action)  => {
+      console.log(action)
+      state.value = state.value.filter(item => item.key !== action.payload);
+      
     }
   }
 })
 
-export const { productContent } = productContentSlice.actions
+export const { productContent,deleteProduct } = productContentSlice.actions
 export default productContentSlice;

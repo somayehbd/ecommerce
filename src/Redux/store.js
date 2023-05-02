@@ -7,7 +7,7 @@ const store = configureStore({
 
     cartIconSliceWithAction: cartIconSliceWithAction.reducer,
     cartVisibility: cartVisibilitySlice.reducer,
-    productContent:productContentSlice.reducer
+    productContent:productContentSlice.reducer,
   }
 })
 export default store;
