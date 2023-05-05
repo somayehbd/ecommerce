@@ -24,6 +24,7 @@ const productContentSlice = createSlice({
       state.value = state.value.filter(item => item.key !== action.payload);
       localStorage.setItem('products', JSON.stringify(state.value));
     }
+    
   }
 })
 
