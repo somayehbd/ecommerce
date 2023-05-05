@@ -6,6 +6,7 @@ import { useDispatch } from 'react-redux';
 import { cartVisibility } from '../../Redux/changeShoppingCartVisibilitySlice.js'
 import { useSelector } from "react-redux";
 import { deleteProduct } from "../../Redux/productContentSlice"
+
 function ShoppingCart() {
 
     const dispatch = useDispatch();
