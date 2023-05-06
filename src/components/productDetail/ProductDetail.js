@@ -1,10 +1,10 @@
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import style from './detailProduct.module.css'
 import { useDispatch } from 'react-redux';
 import { addToShoppingCart } from "../../Redux/shoppingCartSlice"
+import style from './ProductDetail.module.css'
 
-function DetailProduct() {
+function ProductDetail() {
 
     const { seoName } = useParams();
     const [product, setproduct] = useState({});
@@ -38,4 +38,4 @@ function DetailProduct() {
 
     )
 }
-export default DetailProduct;
+export default ProductDetail;

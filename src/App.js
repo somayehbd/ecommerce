@@ -2,7 +2,7 @@ import './App.css';
 import HomeProduct from './components/homeproduct/HomeProduct';
 import Layout from './components/layout/Layout';
 import { Routes, Route } from "react-router-dom"
-import DetailProduct from './components/detailproduct/DetailProduct';
+import ProductDetail from './components/productDetail/ProductDetail';
 import { Provider } from 'react-redux';
 import store from './Redux/store'
 
@@ -13,7 +13,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Layout />} >
           <Route path="/" element={<HomeProduct />} />
-          <Route path="/detail/:seoName" element={<DetailProduct />} />
+          <Route path="/detail/:seoName" element={<ProductDetail />} />
         </Route>
       </Routes>
          </ Provider>
