@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import style from './detailProduct.module.css'
 import { useDispatch } from 'react-redux';
-import {productContent} from "../../Redux/productContentSlice"
+import { addToShoppingCart } from "../../Redux/shoppingCartSlice"
 
 function DetailProduct() {
 
@@ -32,7 +32,7 @@ function DetailProduct() {
             <p>{product.name}</p>
             <p>{product.price}</p>
             <p>{product.description}</p>
-            <a href="#" className={`btn btn-primary ${style.button}`} onClick={()=> dispatch(productContent(product))}>ADD TO CART</a>
+            <a href="#" className={`btn btn-primary ${style.button}`} onClick={()=> dispatch(addToShoppingCart(product))}>ADD TO CART</a>
         </div>
 
 

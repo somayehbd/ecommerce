@@ -5,13 +5,13 @@ import { IoClose } from 'react-icons/io5';
 import { useDispatch } from 'react-redux';
 import { cartVisibility } from '../../Redux/changeShoppingCartVisibilitySlice.js'
 import { useSelector } from "react-redux";
-import { deleteProduct } from "../../Redux/productContentSlice"
+import { deleteProduct } from "../../Redux/shoppingCartSlice"
 
 function ShoppingCart() {
 
     const dispatch = useDispatch();
     //subscriber
-    const productContent = useSelector(state => state.productContent.value);
+    const shoppingCartItems = useSelector(state => state.shoppingCartSlice.items);
     
     return (
         <>
@@ -27,7 +27,7 @@ function ShoppingCart() {
 
                 <div className={`row ${style.contentContainer}`}>
                     <div className="col-12">
-                        {productContent.map(item => {
+                        {shoppingCartItems.map(item => {
                             return (
                                 <div key={item.key} className={style.flexContainer}>
                                     <div className={style.item1}>
