@@ -6,11 +6,11 @@ const cartVisibilitySlice = createSlice({
       value: 0
     },
     reducers: {
-      cartVisibility: (state) => {
+      changeCartVisibility: (state) => {
         state.value = state.value+1
       }
     }
   })
   
-  export const { cartVisibility } = cartVisibilitySlice.actions
+  export const { changeCartVisibility } = cartVisibilitySlice.actions
   export default cartVisibilitySlice;

@@ -3,7 +3,7 @@ import style from './ShoppingCart.module.css'
 import { RiDeleteBin6Fill } from 'react-icons/ri';
 import { IoClose } from 'react-icons/io5';
 import { useDispatch } from 'react-redux';
-import { cartVisibility } from '../../Redux/changeShoppingCartVisibilitySlice.js'
+import { changeCartVisibility } from '../../Redux/cartVisibilitySlice.js'
 import { useSelector } from "react-redux";
 import { deleteProduct } from "../../Redux/shoppingCartSlice"
 
@@ -20,7 +20,7 @@ function ShoppingCart() {
                     <div className={`col-12 ${style.shopppingCartHeader}`}>
                         <p>shopping Cart</p>
                         <div className={style.closeShoppingcart}>
-                            <IoClose onClick={() => dispatch(cartVisibility())} />
+                            <IoClose onClick={() => dispatch(changeCartVisibility())} />
                         </div>
                     </div>
                 </div>

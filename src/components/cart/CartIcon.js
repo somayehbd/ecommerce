@@ -9,7 +9,7 @@ const Cart = () => {
     //listener to shoppingCartSlice to count number of products
     const shoppingCartItems = useSelector((state) => state.shoppingCartSlice.items);
     // cartIcon is subscriber to close cart
-    const cartvisibility = useSelector(state => state.cartVisibility.value);
+    const cartVisibility = useSelector(state => state.cartVisibilitySlice.value);
 
     //handleclick to show and hidden shoppingCart
     const handleCloseCart = () => {
@@ -17,11 +17,11 @@ const Cart = () => {
     }
     //useEffect for cartIcon subscriber
     useEffect(() => {
-        if (cartvisibility == 0)
+        if (cartVisibility == 0)
             return;
 
         setisOpenCart(!isOpenCart)
-    }, [cartvisibility])
+    }, [cartVisibility])
 
     return (
         <>
