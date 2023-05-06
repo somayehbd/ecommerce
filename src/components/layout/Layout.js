@@ -1,11 +1,10 @@
 import style from './Layout.module.css';
 import Menu from '../menu/Menu';
-import CartIcon from '../cart/CartIcon'
+import CartIcon from '../cartIcon/CartIcon'
 import Search from "../search/Search";
 import Leftfoot from "../leftfoot/Leftfoot";
 import Support from "../support/Support";
 import Map from "../map/Map";
-import HomeProduct from '../homeproduct/HomeProduct';
 import { Outlet } from 'react-router-dom';
 
 const Layout = () => {

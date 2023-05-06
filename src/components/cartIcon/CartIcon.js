@@ -4,7 +4,7 @@ import { useSelector } from "react-redux"
 import ShoppingCart from '../shoppingcart/ShoppingCart';
 import { useEffect, useState } from 'react';
 
-const Cart = () => {
+const CartIcon = () => {
     const [isOpenCart, setisOpenCart] = useState(false);
     //listener to shoppingCartSlice to count number of products
     const shoppingCartItems = useSelector((state) => state.shoppingCartSlice.items);
@@ -33,4 +33,4 @@ const Cart = () => {
         </>
     )
 }
-export default Cart;
+export default CartIcon;
