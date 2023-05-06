@@ -1,4 +1,4 @@
-import HomeProduct from "../homeproduct/HomeProduct";
+import HomeProduct from "../homeProduct/HomeProduct";
 import style from './ShoppingCart.module.css'
 import { RiDeleteBin6Fill } from 'react-icons/ri';
 import { IoClose } from 'react-icons/io5';

@@ -1,9 +1,9 @@
 
 import { useState, useEffect } from 'react';
-import { Link, json } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { useDispatch } from "react-redux"
-import style from './HomeProduct.module.css'
 import { addToShoppingCart } from '../../Redux/shoppingCartSlice'
+import style from './HomeProduct.module.css'
 
 function HomeProduct() {
 
