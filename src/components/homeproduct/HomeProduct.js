@@ -2,7 +2,6 @@
 import { useState, useEffect } from 'react';
 import { Link, json } from 'react-router-dom';
 import { useDispatch } from "react-redux"
-import { decrementedWithAction, incrementedWithAction } from "../../Redux/cartIconSliceWithAction"
 import style from './HomeProduct.module.css'
 import { addToShoppingCart } from '../../Redux/shoppingCartSlice'
 
@@ -12,7 +11,6 @@ function HomeProduct() {
     const dispatch = useDispatch();
     // have different dispatch 
     const handleClick = (id, name, price, image) => {
-        dispatch(incrementedWithAction(1))
         dispatch(addToShoppingCart({ id: id, name: name, price: price, image: image }))
     }
 
