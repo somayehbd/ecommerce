@@ -1,7 +1,7 @@
 import Menu from '../menu/Menu';
 import CartIcon from '../cartIcon/CartIcon'
 import Search from "../search/Search";
-import Leftfoot from "../leftfoot/Leftfoot";
+import LeftFooter from "../leftFooter/LeftFooter";
 import Support from "../support/Support";
 import Map from "../map/Map";
 import { Outlet } from 'react-router-dom';
@@ -19,7 +19,7 @@ const Layout = () => {
           <Outlet/>
             </div>
             <div className={`row ${style.footer}`}>
-                <div className="col-4"><Leftfoot /></div>
+                <div className="col-4"><LeftFooter /></div>
                 <div className="col-4"><Support /></div>
                 <div className="col-4"><Map /></div>
             </div>
