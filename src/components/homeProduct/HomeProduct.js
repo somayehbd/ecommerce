@@ -7,7 +7,7 @@ import style from './HomeProduct.module.css'
 
 function HomeProduct() {
 
-    const [product, setProduct] = useState([]);
+    const [products, setProducts] = useState([]);
     const dispatch = useDispatch();
     // have different dispatch 
     const handleClick = (id, name, price, image) => {
@@ -20,7 +20,7 @@ function HomeProduct() {
                 return res.json()
             })
             .then(data => {
-                setProduct(data)
+                setProducts(data)
             })
             .catch(error => {
                 console.log("error: ", error)
@@ -28,7 +28,7 @@ function HomeProduct() {
     }, [])
 
     return (
-        product.map(item => {
+        products.map(item => {
             return (
                 <div className="col-3" key={item.id}>
                     <Link to={`/detail/${item.seoName}`}>
