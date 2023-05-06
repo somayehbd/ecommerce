@@ -1,7 +1,7 @@
 import style from './CartIcon.module.css'
 import { FaShoppingCart } from 'react-icons/fa';
 import { useSelector } from "react-redux"
-import ShoppingCart from '../shoppingcart/ShoppingCart';
+import ShoppingCart from '../shoppingCart/ShoppingCart';
 import { useEffect, useState } from 'react';
 
 const CartIcon = () => {

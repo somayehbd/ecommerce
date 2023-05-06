@@ -1,11 +1,10 @@
-import HomeProduct from "../homeProduct/HomeProduct";
-import style from './ShoppingCart.module.css'
 import { RiDeleteBin6Fill } from 'react-icons/ri';
 import { IoClose } from 'react-icons/io5';
 import { useDispatch } from 'react-redux';
 import { changeCartVisibility } from '../../Redux/cartVisibilitySlice.js'
 import { useSelector } from "react-redux";
 import { deleteFromShoppingCart } from "../../Redux/shoppingCartSlice"
+import style from './ShoppingCart.module.css'
 
 function ShoppingCart() {
 
