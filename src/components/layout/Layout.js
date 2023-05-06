@@ -1,4 +1,3 @@
-import style from './Layout.module.css';
 import Menu from '../menu/Menu';
 import CartIcon from '../cartIcon/CartIcon'
 import Search from "../search/Search";
@@ -6,9 +5,9 @@ import Leftfoot from "../leftfoot/Leftfoot";
 import Support from "../support/Support";
 import Map from "../map/Map";
 import { Outlet } from 'react-router-dom';
+import style from './Layout.module.css';
 
 const Layout = () => {
-
     return (
         < div className="container-fluid" >
             <div className={`row ${style.topnav}`}>
@@ -26,6 +25,5 @@ const Layout = () => {
             </div>
         </div >
     )
-
 }
 export default Layout;
