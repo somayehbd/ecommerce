@@ -5,7 +5,7 @@ import { IoClose } from 'react-icons/io5';
 import { useDispatch } from 'react-redux';
 import { changeCartVisibility } from '../../Redux/cartVisibilitySlice.js'
 import { useSelector } from "react-redux";
-import { deleteProduct } from "../../Redux/shoppingCartSlice"
+import { deleteFromShoppingCart } from "../../Redux/shoppingCartSlice"
 
 function ShoppingCart() {
 
@@ -31,7 +31,7 @@ function ShoppingCart() {
                             return (
                                 <div key={item.key} className={style.flexContainer}>
                                     <div className={style.item1}>
-                                        <button ><RiDeleteBin6Fill size={24} onClick={() => dispatch(deleteProduct(item.key))} /></button>
+                                        <button ><RiDeleteBin6Fill size={24} onClick={() => dispatch(deleteFromShoppingCart(item.key))} /></button>
                                     </div>
                                     <div className={style.item2}>
                                         <p>{item.data.name}</p>

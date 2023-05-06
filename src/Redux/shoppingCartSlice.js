@@ -20,7 +20,7 @@ const shoppingCartSlice = createSlice({
       state.items = [...state.items, newData];
       localStorage.setItem('products', JSON.stringify(state.items));
     },
-    deleteProduct: (state, action)  => {
+    deleteFromShoppingCart: (state, action)  => {
       state.items = state.items.filter(item => item.key !== action.payload);
       localStorage.setItem('products', JSON.stringify(state.items));
     },
@@ -28,5 +28,5 @@ const shoppingCartSlice = createSlice({
   }
 })
 
-export const { addToShoppingCart, deleteProduct } = shoppingCartSlice.actions
+export const { addToShoppingCart, deleteFromShoppingCart } = shoppingCartSlice.actions
 export default shoppingCartSlice;
