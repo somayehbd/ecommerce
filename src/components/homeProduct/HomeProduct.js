@@ -23,14 +23,15 @@ function HomeProduct() {
     }, [])
 
     return (
-        searchQuery == '' ? products.map(item => {
+        searchQuery == '' ? products
+        .map(item => {
            return (<HomeProductBox product={item}/>)
-        }) : products.filter(item => { // pipline senario
+        }) : products
+        .filter(item => { // pipline senario
             return item.name.toLowerCase().includes(searchQuery) ;
-        }).map(item => {
-            return (
-                 (<HomeProductBox product={item}/>)
-            )
+        })
+        .map(item => {
+            return (<HomeProductBox product={item}/>)
         })
     )
 }
