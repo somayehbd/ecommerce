@@ -16,7 +16,7 @@ const Layout = () => {
                 <div className="col-2"><CartIcon/></div>
             </div>
             <div className={`row ${style.content}`}>
-          <Outlet/>
+                <Outlet/>
             </div>
             <div className={`row ${style.footer}`}>
                 <div className="col-4"><LeftFooter /></div>
