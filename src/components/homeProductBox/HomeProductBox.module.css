@@ -1,3 +1,11 @@
+.box {
+    position: relative;
+    padding-bottom: 50px;
+    margin-bottom: 20px;
+}
+
+
+
 .productdetail {
     text-align: center;
 }
@@ -14,7 +22,9 @@
     cursor: pointer;
     justify-content: center;
     color: rgba(255, 255, 255, var(--text-opacity));
-
+    position: absolute;
+    bottom: 0;
+    left: 0;
 }
 
 .button:hover {

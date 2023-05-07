@@ -13,7 +13,7 @@ function HomeProductBox(props) {
     }
 
     return (
-        <div className="col-3" key={product.id}>
+        <div className={`col-3 ${style.box}`} key={product.id}>
             <Link to={`/detail/${product.seoName}`}>
                 <img src={product.image} className={style.image} />
             </Link>
@@ -23,8 +23,7 @@ function HomeProductBox(props) {
                 </Link>
                 <p>{"$" + product.price}</p>
                 <p>{product.description.substring(0, 40)}...</p>
-                <a href="#" className={`btn btn-primary ${style.button}`} onClick={() => handleClick(product.id, product.name, product.price, product.image)}>ADD TO CART</a>
-
+                <a href="javascript:void(0);" className={`btn btn-primary ${style.button}`} onClick={() => handleClick(product.id, product.name, product.price, product.image)}>ADD TO CART</a>
             </div>
         </div>
     )
