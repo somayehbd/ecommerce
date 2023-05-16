@@ -5,13 +5,22 @@ import { changeCartVisibility } from '../../Redux/cartVisibilitySlice.js'
 import { useSelector } from "react-redux";
 import { deleteFromShoppingCart } from "../../Redux/shoppingCartSlice"
 import style from './ShoppingCart.module.css'
+import { useEffect } from 'react';
 
 function ShoppingCart() {
 
     const dispatch = useDispatch();
     //subscriber
     const shoppingCartItems = useSelector(state => state.shoppingCartSlice.items);
-    
+
+    useEffect(() => {
+        let prices = shoppingCartItems.reduce((total, item) => {
+            return total + item.data.price
+        }, 0)
+        
+    }, [shoppingCartItems])
+
+
     return (
         <>
             <div className={`container ${style.shoppingCartContainer}`}>

@@ -7,7 +7,6 @@ const searchProductSlice = createSlice({
     },
     reducers: {
       searchProduct: (state,action) => {
-        console.log(action)
         state.searchQuery=action.payload
       }
     }
