@@ -5,20 +5,23 @@ import { changeCartVisibility } from '../../Redux/cartVisibilitySlice.js'
 import { useSelector } from "react-redux";
 import { deleteFromShoppingCart } from "../../Redux/shoppingCartSlice"
 import style from './ShoppingCart.module.css'
-import { useEffect } from 'react';
+import { useEffect,useState } from 'react';
 
 function ShoppingCart() {
 
     const dispatch = useDispatch();
     //subscriber
     const shoppingCartItems = useSelector(state => state.shoppingCartSlice.items);
+    //state to use reduce func
+    const [totalprices,setuseState]=useState(0);
 
-    useEffect(() => {
-        let prices = shoppingCartItems.reduce((total, item) => {
-            return total + item.data.price
-        }, 0)
-        
-    }, [shoppingCartItems])
+        useEffect(() => {
+            //reduce func to calc totalprices
+            let prices = shoppingCartItems.reduce((total, item) => {
+                return total + item.data.price
+            }, 0)
+            setuseState(prices)
+        }, [shoppingCartItems])
 
 
     return (
@@ -58,7 +61,7 @@ function ShoppingCart() {
                 <div className={`row ${style.calcContainer}`}>
                     <div className={`col-12 ${style.shopppingCartTotal}`}>
                         <p> TotalPrice:</p>
-                        <p>355$</p>
+                        <p>{totalprices}$</p>
                     </div>
                 </div>
                 <div className={`row ${style.btncontainer}`}>
