@@ -5,6 +5,7 @@ import { Routes, Route } from "react-router-dom"
 import ProductDetail from './components/productDetail/ProductDetail';
 import { Provider } from 'react-redux';
 import store from './Redux/store'
+import LayoutManagement from './components/layoutManagement/LayoutManagement'
 
 function App() {
   return (
@@ -15,9 +16,10 @@ function App() {
           <Route path="/" element={<HomeProduct />} />
           <Route path="/detail/:seoName" element={<ProductDetail />} />
         </Route>
+        <Route path="/admin" element={<LayoutManagement />} >
+        </Route>
       </Routes>
-         </ Provider>
-         
+    </ Provider>         
   );
 }
 
