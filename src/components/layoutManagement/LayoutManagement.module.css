@@ -1,0 +1,13 @@
+.management {
+    background-color: black;
+    color: white;
+    height: 80px;
+}
+
+.search {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    margin-top: 10px;
+}
