@@ -16,7 +16,9 @@ function Menu() {
                 <a className="nav-link" href="#">Link</a>
             </li>
             <li className="nav-item">
-                <a className="nav-link " href="#">Management</a>
+
+                <Link to={'/admin'} className="nav-link " >
+                    Management</Link>
             </li>
         </ul>
     )

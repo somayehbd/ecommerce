@@ -5,7 +5,7 @@ import { Routes, Route } from "react-router-dom"
 import ProductDetail from './components/productDetail/ProductDetail';
 import { Provider } from 'react-redux';
 import store from './Redux/store'
-import LayoutManagement from './components/layoutManagement/LayoutManagement'
+import LayoutManagement from './components/ManagementLayout/ManagementLayout'
 
 function App() {
   return (
