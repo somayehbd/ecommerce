@@ -1,7 +1,7 @@
-import { Outlet } from "react-router-dom";
-import style from "./ManagementLayout.module.css"
+import { Link, Outlet } from "react-router-dom";
+import style from "./layout.module.css"
 
-function LayoutManagement() {
+function Layout() {
     return (
         <>
             <div className={style.management}>Management</div>
@@ -14,7 +14,10 @@ function LayoutManagement() {
                         <button type="button" className={`btn btn-outline-danger ${style.delete}`}>Delete</button>
                     </div>
                     <div className="col-4">
-                        <button type="button" className={`btn btn-outline-success ${style.success}`}>NewProduct</button>
+                        <Link to={'/admin/addproduct'}>
+                            <button type="button" className="btn btn-outline-success" >NewProduct</button>
+                        </Link>
+
                     </div>
                 </div>
             </div>
@@ -23,4 +26,4 @@ function LayoutManagement() {
 
     )
 }
-export default LayoutManagement;
+export default Layout;
