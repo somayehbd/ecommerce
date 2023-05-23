@@ -22,6 +22,8 @@ function HomeProduct() {
             })
     }, [])
 
+
+
     return (
         searchQuery == '' ? products
         .map((item, index) => {
