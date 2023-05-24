@@ -1,7 +1,14 @@
 import { Link, Outlet } from "react-router-dom";
 import style from "./ManagementProduct.module.css"
+import { useEffect, useState } from "react";
 
 function ManagementProduct() {
+
+    let data = JSON.parse(localStorage.getItem('products'));
+    if (data == null) {
+        data = [];
+    }
+
     return (
         <div className="container">
             <div className="row">
@@ -18,15 +25,19 @@ function ManagementProduct() {
 
                 </div>
             </div>
-            <div className="row">
-                <div className="col-12">
-                    <p>apple</p>
-                    <p>apple</p>
-                    <p>apple</p>
-                    <p>apple</p>
-                    <p>apple</p>
-                </div>
-            </div>
+            {
+                data.map((item) => {
+                    return (
+                        <div className="row">
+                            <div className="col-3">{item.name}</div>
+                            <div className="col-3">{item.price}</div>
+                            <div className="col-3">{item.description}</div>
+                            <div className="col-3">{item.name}</div>
+                        </div>
+                    )
+                })
+            }
+
         </div>
     )
 }
