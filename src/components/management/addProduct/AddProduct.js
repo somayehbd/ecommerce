@@ -4,14 +4,14 @@ const AddProduct = () => {
     const { register, handleSubmit } = useForm();
 
     const onSubmit = (data) => {
-        const storedProducts = localStorage.getItem('products');
-        let products = JSON.parse(storedProducts)
+        const storedProducts = localStorage.getItem('managementproducts');
+        let managementproducts = JSON.parse(storedProducts)
 
-        if (products == null) {
-            products = [data];
+        if (managementproducts == null) {
+            managementproducts = [data];
         }
-        products.push(data)
-        localStorage.setItem('products', JSON.stringify(products))
+        managementproducts.push(data)
+        localStorage.setItem('managementproducts', JSON.stringify(managementproducts))
     }
 
     return (

@@ -4,9 +4,9 @@ import { useEffect, useState } from "react";
 
 function ManagementProduct() {
 
-    let data = JSON.parse(localStorage.getItem('products'));
-    if (data == null) {
-        data = [];
+    let products = JSON.parse(localStorage.getItem('managementproducts'));
+    if (products == null) {
+        products = [];
     }
 
     return (
@@ -26,7 +26,7 @@ function ManagementProduct() {
                 </div>
             </div>
             {
-                data.map((item) => {
+                products.map((item) => {
                     return (
                         <div className="row">
                             <div className="col-3">{item.name}</div>
