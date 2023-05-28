@@ -25,7 +25,27 @@ function ManagementProduct() {
 
                 </div>
             </div>
-            {
+            <table className={style.productTable}>
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Description</th>
+            <th>Category</th>
+          </tr>
+        </thead>
+        <tbody>
+          {products.map((item, index) => (
+            <tr key={index}>
+              <td>{item.name}</td>
+              <td>{item.price}</td>
+              <td>{item.description}</td>
+              <td>{item.category}</td>
+            </tr>
+          ))}
+        </tbody>
+        </table>
+            {/* {
                 products.map((item) => {
                     return (
                         <div className="row">
@@ -36,7 +56,7 @@ function ManagementProduct() {
                         </div>
                     )
                 })
-            }
+            } */}
 
         </div>
     )
