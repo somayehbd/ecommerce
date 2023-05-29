@@ -59,7 +59,7 @@ function ManagementProduct() {
                 </td>
                 <td>{item.price}</td>
                 <td>{item.description}</td>
-                <td>{item.photo}</td>
+                <td className={style.image}><img src={item.productPicture} /></td>
               </tr>
             )
           })

@@ -11,7 +11,7 @@ const AddProduct = () => {
 
         id++;
         localStorage.setItem('lastId', id);
-        
+
         return id;
     }
 
@@ -45,7 +45,7 @@ const AddProduct = () => {
                     </div>
                     <div className="form-group">
                         <label for="productPicture">Product Picture:</label>
-                        <input type="text" className="form-control-file" id="productPicture" />
+                        <input type="text" className="form-control-file" id="productPicture" {...register("productPicture")} />
                     </div>
                     <div className="form-group">
                         <button type="submit" className="btn btn-primary">submit</button>
