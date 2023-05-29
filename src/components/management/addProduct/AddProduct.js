@@ -2,15 +2,28 @@ import { useForm } from 'react-hook-form';
 
 const AddProduct = () => {
     const { register, handleSubmit } = useForm();
+    //function for create generateID
+    function unicid() {
+        let count = 0;
+        return function () {
+            count++;
+            return count;
+        }
+    }
+    const generateID = unicid()
 
     const onSubmit = (data) => {
         const storedProducts = localStorage.getItem('managementproducts');
         let managementproducts = JSON.parse(storedProducts)
 
         if (managementproducts == null) {
-            managementproducts = [data];
+            managementproducts = [];
         }
-        managementproducts.push(data)
+
+        else {
+            managementproducts.push({ id: generateID(), ...data })
+        }
+
         localStorage.setItem('managementproducts', JSON.stringify(managementproducts))
     }
 
