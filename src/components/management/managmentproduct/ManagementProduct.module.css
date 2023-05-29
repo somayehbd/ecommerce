@@ -36,3 +36,9 @@
     background-color: #dcace2;
     cursor: pointer;
   }
+  .checkboxLabel {
+    font-weight: bold;
+    color: blue;
+    margin-right: 10px;
+  }
+ 

@@ -32,14 +32,21 @@ function ManagementProduct() {
             <th>Price</th>
             <th>Description</th>
             <th>photo</th>
+
           </tr>
         </thead>
         <tbody>
-          {products.map((item,id) => {
+          {products.map((item, id) => {
             return (
 
               <tr key={id}>
-                <td>{item.name}</td>
+
+                <td>
+                  <label className={style.checkboxLabel}>
+                    <input type="checkbox" />
+                  </label>
+                  {item.name}
+                </td>
                 <td>{item.price}</td>
                 <td>{item.description}</td>
                 <td>{item.photo}</td>
