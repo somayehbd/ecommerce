@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import style from "./ManagementProduct.module.css"
+import { useEffect, useState } from "react";
 
 
 function ManagementProduct() {
@@ -8,12 +9,21 @@ function ManagementProduct() {
   if (products == null) {
     products = [];
   }
+  
+  //function for search
+  const [filteredProducts, setfilteredProducts] = useState(products);
+  const searchchange = (e) => {
+    const filteredProducts = products.filter(item => {
+      return item.name.toLowerCase().includes(e.target.value.toLowerCase())
+    })
+    setfilteredProducts(filteredProducts);
+  }
 
   return (
     <div className="container">
       <div className="row">
         <div className="col-4">
-          <input className={`form-control mr-sm-2 ${style.search}`} type="search" placeholder="Search" aria-label="Search" />
+          <input className={`form-control mr-sm-2 ${style.search}`} type="search" placeholder="Search" aria-label="Search" onChange={searchchange} />
         </div>
         <div className="col-4">
           <button type="button" className={`btn btn-outline-danger ${style.delete}`}>Delete</button>
@@ -36,7 +46,7 @@ function ManagementProduct() {
           </tr>
         </thead>
         <tbody>
-          {products.map((item, id) => {
+          {filteredProducts.map((item, id) => {
             return (
 
               <tr key={id}>

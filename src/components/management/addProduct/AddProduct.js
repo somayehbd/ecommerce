@@ -16,13 +16,10 @@ const AddProduct = () => {
         const storedProducts = localStorage.getItem('managementproducts');
         let managementproducts = JSON.parse(storedProducts)
 
-        if (managementproducts == null) {
+        if (managementproducts == null)
             managementproducts = [];
-        }
 
-        else {
-            managementproducts.push({ id: generateID(), ...data })
-        }
+        managementproducts.push({ id: generateID(), ...data })
 
         localStorage.setItem('managementproducts', JSON.stringify(managementproducts))
     }
