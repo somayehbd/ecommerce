@@ -3,14 +3,17 @@ import { useForm } from 'react-hook-form';
 const AddProduct = () => {
     const { register, handleSubmit } = useForm();
     //function for create generateID
-    function unicid() {
-        let count = 0;
-        return function () {
-            count++;
-            return count;
-        }
+
+    function uniqueId() {
+        let id = localStorage.getItem("lastId");
+        if (id == null)
+            id = 0;
+
+        id++;
+        localStorage.setItem('lastId', id);
+        
+        return id;
     }
-    const generateID = unicid()
 
     const onSubmit = (data) => {
         const storedProducts = localStorage.getItem('managementproducts');
@@ -19,7 +22,7 @@ const AddProduct = () => {
         if (managementproducts == null)
             managementproducts = [];
 
-        managementproducts.push({ id: generateID(), ...data })
+        managementproducts.push({ id: uniqueId(), ...data })
 
         localStorage.setItem('managementproducts', JSON.stringify(managementproducts))
     }
