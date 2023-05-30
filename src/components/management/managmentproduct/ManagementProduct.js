@@ -9,7 +9,7 @@ function ManagementProduct() {
   if (products == null) {
     products = [];
   }
-  
+
   //function for search
   const [filteredProducts, setfilteredProducts] = useState(products);
   const searchchange = (e) => {
@@ -19,6 +19,24 @@ function ManagementProduct() {
     setfilteredProducts(filteredProducts);
   }
 
+
+  //state to store the list of selected products
+  const [selectedProducts, setSelectedProducts] = useState([]);
+
+  const handleProductSelection = (productId) => {
+
+    if (selectedProducts.includes(productId)) {
+      setSelectedProducts(selectedProducts.filter(id => id != productId))
+    }
+    else {
+      setSelectedProducts([...selectedProducts, productId])
+    }
+  }
+
+  useEffect(() => {
+    console.log(selectedProducts)
+  }, [selectedProducts]);
+
   return (
     <div className="container">
       <div className="row">
@@ -26,7 +44,7 @@ function ManagementProduct() {
           <input className={`form-control mr-sm-2 ${style.search}`} type="search" placeholder="Search" aria-label="Search" onChange={searchchange} />
         </div>
         <div className="col-4">
-          <button type="button" className={`btn btn-outline-danger ${style.delete}`}>Delete</button>
+          <button type="button" className={`btn btn-outline-danger ${style.delete}`} >Delete</button>
         </div>
         <div className="col-4">
           <Link to={'/admin/addproduct'}>
@@ -53,7 +71,7 @@ function ManagementProduct() {
 
                 <td>
                   <label className={style.checkboxLabel}>
-                    <input type="checkbox" />
+                    <input type="checkbox" checked={selectedProducts.includes(item.id)} onChange={() => handleProductSelection(item.id)} />
                   </label>
                   {item.name}
                 </td>
