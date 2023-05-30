@@ -2,14 +2,13 @@ import { Link } from "react-router-dom";
 import style from "./ManagementProduct.module.css"
 import { useEffect, useState } from "react";
 
-
 function ManagementProduct() {
 
   let products = JSON.parse(localStorage.getItem('managementproducts'));
   if (products == null) {
     products = [];
   }
-
+  
   //function for search
   const [filteredProducts, setfilteredProducts] = useState(products);
   const searchchange = (e) => {
@@ -18,8 +17,6 @@ function ManagementProduct() {
     })
     setfilteredProducts(filteredProducts);
   }
-
-
   //state to store the list of selected products
   const [selectedProducts, setSelectedProducts] = useState([]);
 
@@ -32,11 +29,16 @@ function ManagementProduct() {
       setSelectedProducts([...selectedProducts, productId])
     }
   }
+  //function for deleteProduct
+  const handledeleteProduct = () => {
+    let products = JSON.parse(localStorage.getItem('managementproducts'));
+    products = products.filter(item => !selectedProducts.includes(item.id));
+    localStorage.setItem('managementproducts', JSON.stringify(products));
+  }
 
   useEffect(() => {
     console.log(selectedProducts)
-  }, [selectedProducts]);
-
+  })
   return (
     <div className="container">
       <div className="row">
@@ -44,7 +46,7 @@ function ManagementProduct() {
           <input className={`form-control mr-sm-2 ${style.search}`} type="search" placeholder="Search" aria-label="Search" onChange={searchchange} />
         </div>
         <div className="col-4">
-          <button type="button" className={`btn btn-outline-danger ${style.delete}`} >Delete</button>
+          <button type="button" className={`btn btn-outline-danger ${style.delete}`} onClick={handledeleteProduct}>Delete</button>
         </div>
         <div className="col-4">
           <Link to={'/admin/addproduct'}>
