@@ -2,8 +2,8 @@ import { useForm } from 'react-hook-form';
 
 const AddProduct = () => {
     const { register, handleSubmit } = useForm();
-    //function for create generateID
 
+    //function for create generateID
     function uniqueId() {
         let id = localStorage.getItem("lastId");
         if (id == null)

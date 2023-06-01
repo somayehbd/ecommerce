@@ -1,27 +1,23 @@
-import { Link } from "react-router-dom";
-import style from "./ManagementProduct.module.css"
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
+import style from "./ManagementProduct.module.css";
 
 function ManagementProduct() {
-
-  let products = JSON.parse(localStorage.getItem('managementproducts'));
-  if (products == null) {
-    products = [];
-  }
+  const [orginalProducts, setOriginalProducts] = useState([]);
+  const [filteredProducts, setFilteredProducts] = useState([]);
+  const [selectedProducts, setSelectedProducts] = useState([]);
   
   //function for search
-  const [filteredProducts, setfilteredProducts] = useState(products);
-  const searchchange = (e) => {
-    const filteredProducts = products.filter(item => {
+  const handleSearch = (e) => {
+    const filteredProducts = orginalProducts.filter(item => {
       return item.name.toLowerCase().includes(e.target.value.toLowerCase())
     })
-    setfilteredProducts(filteredProducts);
+    setFilteredProducts(filteredProducts);
   }
+
   //state to store the list of selected products
-  const [selectedProducts, setSelectedProducts] = useState([]);
-
   const handleProductSelection = (productId) => {
-
+    
     if (selectedProducts.includes(productId)) {
       setSelectedProducts(selectedProducts.filter(id => id != productId))
     }
@@ -29,24 +25,30 @@ function ManagementProduct() {
       setSelectedProducts([...selectedProducts, productId])
     }
   }
+  
   //function for deleteProduct
-  const handledeleteProduct = () => {
+  const handleDeleteProduct = () => {
     let products = JSON.parse(localStorage.getItem('managementproducts'));
-    products = products.filter(item => !selectedProducts.includes(item.id));
+    products = orginalProducts.filter(item => !selectedProducts.includes(item.id));    
     localStorage.setItem('managementproducts', JSON.stringify(products));
+    setOriginalProducts(products)
+    setFilteredProducts(products)
   }
 
   useEffect(() => {
-    console.log(selectedProducts)
-  })
+    let tempProducts = JSON.parse(localStorage.getItem('managementproducts'))
+    setOriginalProducts(tempProducts);
+    setFilteredProducts(tempProducts);
+  }, [])
+
   return (
     <div className="container">
       <div className="row">
         <div className="col-4">
-          <input className={`form-control mr-sm-2 ${style.search}`} type="search" placeholder="Search" aria-label="Search" onChange={searchchange} />
+          <input className={`form-control mr-sm-2 ${style.search}`} type="search" placeholder="Search" aria-label="Search" onChange={handleSearch} />
         </div>
         <div className="col-4">
-          <button type="button" className={`btn btn-outline-danger ${style.delete}`} onClick={handledeleteProduct}>Delete</button>
+          <button type="button" className={`btn btn-outline-danger ${style.delete}`} onClick={handleDeleteProduct}>Delete</button>
         </div>
         <div className="col-4">
           <Link to={'/admin/addproduct'}>
