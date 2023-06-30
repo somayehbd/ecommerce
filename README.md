@@ -2,6 +2,10 @@
 
 The ecommerce project is a JavaScript-based application developed using React and Redux.This project uses JavaScript, uses Redux for state management, React Router for routing, and hook-form. 
 
+![Main Page](./docs/main-page.png)
+
+![Shopping Cart](./docs/shopping-cart.png)
+
 ## Server Simulation with Mockoon
 
 The ecommerce application utilizes Mockoon to simulate server-side behavior by mocking REST API endpoints.
